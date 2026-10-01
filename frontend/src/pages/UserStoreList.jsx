@@ -95,7 +95,7 @@ const UserStoreList = () => {
           <div className="page-header">
             <div>
               <h1 className="page-title">Registered Stores Directory</h1>
-              <p className="page-description">Browse stores, view overall ratings, and submit or modify your personal ratings</p>
+              <p className="page-description">Browse stores, view overall ratings and submit or modify your personal ratings</p>
             </div>
           </div>
 
@@ -198,12 +198,12 @@ const UserStoreList = () => {
                         <StarRating
                           rating={s.user_rating || 0}
                           readOnly={false}
-                          size={22}
+                          size={20}
                           onChange={(newRating) => handleRateStore(s.id, newRating)}
                         />
                         {s.user_rating ? (
                           <span className="user-rating-badge">
-                            You rated: {s.user_rating} ⭐ (Click stars to modify)
+                            You rated: {s.user_rating} ⭐ <span className="user-rating-hint">(Click stars to modify)</span>
                           </span>
                         ) : (
                           <span className="user-rating-hint">

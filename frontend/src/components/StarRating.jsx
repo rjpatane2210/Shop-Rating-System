@@ -65,7 +65,7 @@ const StarRating = ({ rating = 0, readOnly = false, onChange, size = 18 }) => {
         );
       })}
       {rating > 0 && readOnly && (
-        <span className="rating-number-badge" style={{ marginLeft: '6px', fontWeight: 700, fontSize: '0.875rem', color: '#d97706' }}>
+        <span className="rating-number-badge" style={{ marginLeft: '6px', marginRight: '6px', fontWeight: 700, fontSize: '0.875rem', color: '#d97706' }}>
           {Number(rating).toFixed(1)}
         </span>
       )}
